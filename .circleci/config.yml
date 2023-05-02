@@ -19,6 +19,6 @@ jobs:
           shell: /bin/sh
           command: |
             cd ../.
-            git checkout git@github.com:marvoey/d10-artifact.git
+            git clone git@github.com:marvoey/d10-artifact.git
             echo "ls -al d10-artifact"
             ls -al d10-artifact

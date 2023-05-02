@@ -7,7 +7,9 @@ jobs:
     steps:
       - checkout
       - run: php --version
+      - run: ls -al
       - run: composer install
+      - run: ls -al
       - run: mkdir deploy
       - run: cp -r .git deploy
       - run: ls -al deploy

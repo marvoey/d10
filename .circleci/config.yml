@@ -33,7 +33,7 @@ jobs:
             ls -al
       - add_ssh_keys:
             fingerprints:
-              - "ee:10:cb:6b:36:74:a4:01:7e:49:0d:5b:75:b7:7f:f6"
+              - "1d:25:dc:ac:34:51:2d:48:97:6f:54:ae:ef:99:49:b4"
       - run:
           shell: /bin/sh
           command: |

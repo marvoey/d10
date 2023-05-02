@@ -31,4 +31,20 @@ jobs:
             composer install
             echo "ls -al"
             ls -al
+      - add_ssh_keys:
+            fingerprints:
+              - "ee:10:cb:6b:36:74:a4:01:7e:49:0d:5b:75:b7:7f:f6"
+      - run:
+          shell: /bin/sh
+          command: |
+            cd deploy
+            pwd
+            git remote add artifact git@github.com:marvoey/d10-artifact.git
+            rm -rf .gitignore
+            git add .
+            git commit -m "Deploy artifact"
+            git log
+            git push -u artifact main
+       
+
        

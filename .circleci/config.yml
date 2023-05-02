@@ -6,13 +6,16 @@ jobs:
       - image: cimg/php:8.2.5
     steps:
       - checkout
-      - run: php --version
-      - run: ls -al
-      - run: composer install
-      - run: ls -al
-      - run: mkdir deploy
-      - run: cp -r .git deploy
-      - run: ls -al deploy
-      - run: cd ./deploy
-      - run: pwd
-      - run: ls deploy
+      - run:
+          command: |
+            php --version
+      - run:
+          shell: /bin/sh
+          command: |
+            composer install
+            mkdir deploy
+            cp -r .git deploy
+            cd deploy
+            ls -al
+            git checkout .
+            ls -al

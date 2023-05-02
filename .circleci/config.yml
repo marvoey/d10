@@ -40,6 +40,8 @@ jobs:
             cd deploy
             pwd
             git remote add artifact git@github.com:marvoey/d10-artifact.git
+            git config --global user.email "marvoey99@gmail.com"
+            git config --global user.name "Marvin Oey (CircleCI Build)"
             rm -rf .gitignore
             git add .
             git commit -m "Deploy artifact"

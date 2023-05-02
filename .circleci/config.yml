@@ -43,6 +43,7 @@ jobs:
             git config --global user.name "Marvin Oey (CircleCI Build)"
             rm -rf .gitignore
             git remote add artifact git@github.com:marvoey/d10-artifact.git
+            git fetch --all
             git add .
             git commit -m "Deploy artifact"
             git log

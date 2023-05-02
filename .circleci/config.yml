@@ -16,6 +16,10 @@ jobs:
             mkdir deploy
             cp -r .git deploy
             cd deploy
+            echo "pwd"
+            pwd
             ls -al
             git checkout .
+            echo "git checkout ."
+            echo "ls -al"
             ls -al

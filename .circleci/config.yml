@@ -29,6 +29,7 @@ jobs:
             pwd
             ls -al web/modules/contrib
             rm .gitignore
+            rm web/.gitignore
             rm -rf .git
             cp -r ../d10-artifact/.git .
             git config --global user.email "marvoey99@gmail.com"

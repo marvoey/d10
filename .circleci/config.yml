@@ -45,7 +45,6 @@ jobs:
             git remote add artifact git@github.com:marvoey/d10-artifact.git
             git remote -v
             git branch -M main
-            git push -u artifact main
             git add .
             git commit -m "Deploy artifact"
             git log

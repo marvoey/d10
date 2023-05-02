@@ -10,6 +10,6 @@ jobs:
       - run: composer install
       - run: mkdir deploy
       - run: cp -r .git deploy
-      - run: ls deploy
-      - run: git checkout .
+      - run: ls -al deploy
+      - run: cd deploy & git checkout . & ls -al deploy
       - run: ls deploy

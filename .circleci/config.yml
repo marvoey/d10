@@ -8,5 +8,9 @@ jobs:
       - checkout
       - run: php --version
       - run: composer install
-      - run: composer require drupal/admin_toolbar
+      - run: mkdir deploy
+      - run: cp -r .git deploy
+      - run: cd deploy
+      - run: ls
+      - run: git checkout .
       - run: ls

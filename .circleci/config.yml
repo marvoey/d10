@@ -7,5 +7,5 @@ jobs:
     steps:
       - checkout
       - run: php --version
-      - composer install
-      - ls
+      - run: composer install
+      - run: ls

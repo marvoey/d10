@@ -31,4 +31,6 @@ jobs:
             cp -r ../d10-artifact/.git .
             git add .
             git commit -m "Build artifact..."
+            git config --global user.email "marvoey99@gmail.com"
+            git config --global user.name "Marvin Oey (CircleCI Build)"
             git push

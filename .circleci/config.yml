@@ -16,7 +16,9 @@ jobs:
             composer install
             pwd
       - run:
-          cd ../.
-          git checkout git@github.com:marvoey/d10-artifact.git
-          echo "ls -al d10-artifact"
-          ls -al d10-artifact
+          shell: /bin/sh
+          command: |
+            cd ../.
+            git checkout git@github.com:marvoey/d10-artifact.git
+            echo "ls -al d10-artifact"
+            ls -al d10-artifact

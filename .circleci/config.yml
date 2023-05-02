@@ -5,53 +5,21 @@ jobs:
     docker:
       - image: cimg/php:8.2.5
     steps:
+      - working_directory: ~/d10
       - checkout
-      - run:
-          command: |
-            php --version
-      - run:
-          shell: /bin/sh
-          command: |
-            composer install
-            mkdir deploy
-            cp -r .git deploy
-            cd deploy
-            echo "pwd"
-            pwd
-            ls -al
-            git checkout .
-            echo "git checkout ."
-            echo "ls -al"
-            ls -al
-      - run:
-          shell: /bin/sh
-          command: |
-            cd deploy
-            pwd
-            composer install
-            echo "ls -al"
-            ls -al
       - add_ssh_keys:
             fingerprints:
               - "1d:25:dc:ac:34:51:2d:48:97:6f:54:ae:ef:99:49:b4"
       - run:
           shell: /bin/sh
           command: |
-            git clone git@github.com:marvoey/d10-artifact.git tmp
-      - run:
-          shell: /bin/sh
-          command: |
-            cd deploy
-            rm -rf .git
-            cp -r ../tmp/.git
+            composer install
             pwd
-            git config --global user.email "marvoey99@gmail.com"
-            git config --global user.name "Marvin Oey (CircleCI Build)"
-            rm -rf .gitignore
-            git add .
-            git commit -m "Deploy artifact"
-            git log
-            git push
-       
+      - working_directory: ~
+      - run:
+          git checkout git@github.com:marvoey/d10-artifact.git
+          echo "ls -al d10-artifact"
+          ls -al d10-artifact
 
-       
+
+

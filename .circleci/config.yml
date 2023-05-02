@@ -22,3 +22,13 @@ jobs:
             git clone git@github.com:marvoey/d10-artifact.git
             echo "ls -al d10-artifact"
             ls -al d10-artifact
+      - run:
+          shell: /bin/sh
+          command: |
+            pwd
+            rm .gitignore
+            rm -rf .git
+            cp -r ../d10-artifact/.git .
+            git add .
+            git commit -m "Build artifact..."
+            git push

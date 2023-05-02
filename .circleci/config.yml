@@ -13,6 +13,6 @@ jobs:
       - run: mkdir deploy
       - run: cp -r .git deploy
       - run: ls -al deploy
-      - run: cd deploy
+      - run: cd ./deploy
       - run: pwd
       - run: ls deploy

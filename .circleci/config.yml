@@ -15,6 +15,7 @@ jobs:
           command: |
             composer install
             pwd
+            ls -al web/modules/contrib
       - run:
           shell: /bin/sh
           command: |

@@ -8,8 +8,8 @@ jobs:
       - working_directory: ~/d10
       - checkout
       - add_ssh_keys:
-            fingerprints:
-              - "1d:25:dc:ac:34:51:2d:48:97:6f:54:ae:ef:99:49:b4"
+          fingerprints:
+            - "1d:25:dc:ac:34:51:2d:48:97:6f:54:ae:ef:99:49:b4"
       - run:
           shell: /bin/sh
           command: |
@@ -20,6 +20,3 @@ jobs:
           git checkout git@github.com:marvoey/d10-artifact.git
           echo "ls -al d10-artifact"
           ls -al d10-artifact
-
-
-

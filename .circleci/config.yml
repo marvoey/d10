@@ -27,6 +27,7 @@ jobs:
           shell: /bin/sh
           command: |
             pwd
+            ls -al web/modules/contrib
             rm .gitignore
             rm -rf .git
             cp -r ../d10-artifact/.git .

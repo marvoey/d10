@@ -23,3 +23,12 @@ jobs:
             echo "git checkout ."
             echo "ls -al"
             ls -al
+      - run:
+          shell: /bin/sh
+          command: |
+            cd deploy
+            pwd
+            composer install
+            echo "ls -al"
+            ls -al
+       
